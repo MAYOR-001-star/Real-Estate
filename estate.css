@@ -73,15 +73,17 @@ header{
     justify-content: space-between;
     width: 100%;
 }
-a{
+a, header > a:hover{
     text-decoration: none;
     color: gray;
+}
+a:hover{
+    color: rgb(216, 122, 78);
 }
 header > a{
     font-weight: 900;
     text-transform: uppercase;
 }
-
 .active:active,
 .active:focus { 
     color: white;
@@ -96,6 +98,9 @@ header > a{
 #hamburger-icon, #close-icon{
     color: gray;
     display: none;
+}
+#hamburger-icon:hover, #close-icon:hover{
+    color: rgb(216, 122, 78);
 }
 ul{
     display: flex;
@@ -129,18 +134,48 @@ li{
     text-transform: capitalize;
     line-height: 2rem;
     font-size: 1.5rem;
-    width: min(100%, 90%);
+    width: min(100%, 65%);
     text-align: center;
     flex-direction: column;
-    height: 200%;
+    height: 100%;
     margin: 0 auto;
 }
+.overlay-content h1{
+    line-height: 2.5rem;
+}
+.company-details{
+    padding:  1.5rem;
+}
+h2{
+    text-align: center;
+    margin: 2rem 0;
+    color: rgb(216, 122, 78);
+}
+.company-details{
+    text-transform: capitalize;
+}
+.company-details-content{
+    text-align: center;
+}
+.company-details-content span{
+    color: rgb(216, 122, 78);
+}
+p:nth-child(2){
+    font-weight: 700;
+    margin: 1rem 0;
+}
+.company-details-content p{
+    color: rgba(34, 34, 34, 0.75);
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    padding-bottom: 2rem;
+}
 
-
-
-
-
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 768px) {
     #hamburger-icon{
         display: block;
         cursor: pointer;
@@ -165,8 +200,8 @@ li{
         width: 40%;
         height: 100vh;
         margin: auto;
-        background: rgb(128, 128, 128, 0.45);
-        padding-top: 3rem
+        background: rgb(34, 34, 34, 0.8);
+        padding-top: 3rem;
     }
     ul{
         display: none;
@@ -178,10 +213,33 @@ li{
         gap: 15px;
         padding-left: 1rem;
     }
+    .header-details .image{
+        height: 75vh;
+    }
+    .overlay-content {
+        line-height: 1.5rem;
+        font-size: 1rem;
+    }
 }
 
-
-
+@media screen and (max-width: 630px) {
+   .overlay-content {
+        line-height: 1.5rem;
+        font-size: 1rem;
+        width: min(100%, 95%);
+        padding: 0 0.5rem;
+    }
+    .overlay-content h1{
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
+    .header-details .image{
+        height: 85vh;
+    }
+    .container{
+        display: block;
+    }
+}
 
 
 /* display: flex;

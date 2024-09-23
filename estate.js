@@ -28,7 +28,7 @@
 const navigation = document.getElementById("navigation");
 const links = document.querySelectorAll("ul li a");
 
-// Scroll event listener
+
 window.addEventListener("scroll", () => {
     if (window.scrollY > 0) {
         navigation.style.backgroundColor = "white";
@@ -45,10 +45,9 @@ window.addEventListener("scroll", () => {
     }
 });
 
-// Add active state to clicked links
 links.forEach((link) => {
     link.addEventListener('click', () => {
-        links.forEach((l) => l.classList.remove("active"));
+        // links.forEach((l) => l.classList.remove("active"));
         link.classList.add("active");
     });
 });
@@ -61,7 +60,7 @@ const listContainer = document.querySelector('ul')
 
 openNavbar.addEventListener("click", ()=>{
     openNavbar.style.display = "none"
-    smallScreenNavbar.classList.add("small-screen")
+    smallScreenNavbar.classList.toggle("small-screen")
     listContainer.style.display = "flex"
     closeNavbar.classList.add("show")
     listContainer.classList.add("list-container")
