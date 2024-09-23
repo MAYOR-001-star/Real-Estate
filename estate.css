@@ -1,4 +1,4 @@
-html,
+/* html,
 body {
     position: relative;
     height: 100%;
@@ -40,4 +40,121 @@ body {
     width: 100%;
     height: 300px;
     margin: 20px 1rem;
+} */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", "Helvetica", "Sans-serif";
+    scroll-behavior: smooth;
 }
+.header{
+    background: transparent;
+
+}
+#navigation{
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    font-size: 1.35rem;
+    border-bottom: 0.5px groove gray;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    color: gray;
+}
+header > a{
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.active:active,
+.active:focus { 
+    color: white;
+    font-weight: bold;
+}
+
+.active.sticky-color:active,
+.active.sticky-color:focus {  
+    color: rgb(216, 122, 78);
+}
+
+#hamburger-icon, #close-icon{
+    color: #ffffffa6;
+    display: none;
+}
+ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+li{
+    color: rgba(255, 255, 255, 0.65);
+    list-style-type: none;
+    padding-right: 1rem;
+    text-transform: capitalize;
+}
+
+.header-details .image{
+    background-image: url("/images/real-estate\ header-pic.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+.image-overlay{
+    background-color: rgba(34, 34, 34, 0.75);
+    height: 100%;
+    
+}
+.overlay-content{
+    color: rgba(255, 255, 255, 0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-transform: capitalize;
+    line-height: 2rem;
+    font-size: 1.5rem;
+    width: min(100%, 90%);
+    text-align: center;
+    flex-direction: column;
+    height: 200%;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    gap: 15px;
+    top: 1px;
+    height: 100vh;
+    margin: auto;
+    background: red;
+    padding-top: 3rem; */
