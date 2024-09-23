@@ -41,9 +41,6 @@ window.addEventListener("scroll", () => {
         navigation.style.boxShadow = "none";
         links.forEach((link) => {
             link.classList.remove("sticky-color");
-            if (link.getAttribute("href") === "#home") {
-                link.classList.add("active"); // Set home link as active when scrolled to the top
-            }
         });
     }
 });
@@ -56,7 +53,23 @@ links.forEach((link) => {
     });
 });
 
-// const target = document.querySelector("#begin")
-// if (target){
-//     target.scrollIntoView({behaviour: "smooth"})
-// }
+const openNavbar = document.querySelector("#hamburger-icon")
+const closeNavbar = document.querySelector("#close-icon")
+const smallScreenNavbar = document.querySelector('.for-mobile-nav')
+const listContainer = document.querySelector('ul')
+
+
+openNavbar.addEventListener("click", ()=>{
+    openNavbar.style.display = "none"
+    smallScreenNavbar.classList.add("small-screen")
+    listContainer.style.display = "flex"
+    closeNavbar.classList.add("show")
+    listContainer.classList.add("list-container")
+})
+closeNavbar.addEventListener("click", ()=>{
+    openNavbar.style.display = "block"
+    smallScreenNavbar.classList.remove("small-screen")
+    listContainer.classList.remove("list-container")
+    listContainer.style.display = "none"
+    closeNavbar.classList.remove("show")
+})

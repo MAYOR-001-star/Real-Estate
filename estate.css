@@ -94,7 +94,7 @@ header > a{
 }
 
 #hamburger-icon, #close-icon{
-    color: #ffffffa6;
+    color: gray;
     display: none;
 }
 ul{
@@ -140,7 +140,45 @@ li{
 
 
 
-
+@media screen and (max-width: 769px) {
+    #hamburger-icon{
+        display: block;
+        cursor: pointer;
+    }
+    #close-icon.show{
+        display: block;
+        text-align: end;
+        width: 100%;
+        padding-right: 1rem;
+        cursor: pointer;
+    }
+    .for-mobile-nav.small-screen{
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        gap: 15px;
+        top: 1px;
+        z-index: 5;
+        width: 40%;
+        height: 100vh;
+        margin: auto;
+        background: rgb(128, 128, 128, 0.45);
+        padding-top: 3rem
+    }
+    ul{
+        display: none;
+    }
+    ul.list-container{
+        flex-direction: column;
+        align-items: start;
+        margin-top: 1rem;
+        gap: 15px;
+        padding-left: 1rem;
+    }
+}
 
 
 
