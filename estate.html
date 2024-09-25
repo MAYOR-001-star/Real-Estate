@@ -6,7 +6,7 @@
     <link rel="icon" href="./images/real-estate logo.png" type="image/png">
     <link rel="stylesheet" href="estate.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <title>REAL ESTATE</title>
 </head>
 <body>
@@ -89,19 +89,31 @@
         </div>
     </section>
     <section id="properties">
-        <h6>PROPERTIES</h6>
-    </section>
-    <!-- <div #swiperRef="" class="swiper mySwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 4</div>
+        <div class="properties-header">
+            <h3>properties</h3>
+            <aside>
+                <div class="custom-button" id="prev">Previous</div>
+                <span>/</span>
+                <div class="custom-button" id="next">Next</div>
+            </aside>                       
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-    </div> -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!-- <div class="carousel" data-flickity='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false, "cellAlign": "left", "contain": true, "responsive": [{ "breakpoint": 768, "settings": { "cellAlign": "center" } }, { "breakpoint": 480, "settings": { "cellAlign": "right" } }] }'> -->
+        <div class="carousel" data-flickity='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false, "cellAlign": "left", "contain": true }'>
+            <div class="carousel-cell">
+                <img src="./images/6.jpg" alt="Image 1" />
+            </div>
+            <div class="carousel-cell">
+                <img src="./images/6.jpg" alt="Image 2" />
+            </div>
+            <div class="carousel-cell">
+                <img src="./images/6.jpg" alt="Image 3" />
+            </div>
+            <div class="carousel-cell">
+                <img src="./images/6.jpg" alt="Image 4" />
+            </div>
+        </div>
+    </section>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="./estate.js"></script>
 </body>
 </html>
