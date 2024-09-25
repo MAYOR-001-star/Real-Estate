@@ -20,6 +20,7 @@
     border-bottom: 0.5px groove gray;
     position: fixed;
     top: 0;
+    z-index: 4;
     width: 100%;
 }
 header{
@@ -109,13 +110,15 @@ h2{
 .company-details{
     text-transform: capitalize;
 }
-.company-details-content{
+.company-details-content {
     text-align: center;
+    margin-bottom: 2rem;
 }
 .company-details-content span{
     color: rgb(216, 122, 78);
+    font-size: 3rem;
 }
-p:nth-child(2){
+.company-details-content p:nth-child(2){
     font-weight: 700;
     margin: 1rem 0;
 }
@@ -129,8 +132,11 @@ p:nth-child(2){
     column-gap: 20px;
     padding-bottom: 2rem;
 }
-h3{
-    margin: 0 1rem;
+h3,h4{
+    margin-left: 1rem;
+    color: rgb(216, 122, 78);
+    font-size: 2rem;
+    text-transform: capitalize;
 }
 .properties-header, aside{
     display: flex;
@@ -139,7 +145,69 @@ h3{
     position: relative;
     z-index: 3;
 }
+.property-detail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1rem;
+    font-size: 0.55rem;
+}
+.address{
+    margin-top: 0.7rem;
+    text-align: center;
+    font-size: 0.65rem;
+    width: 100%;
+}
+.btn{
+    background-color: white;
+    color: rgb(216, 122, 78);
+    border: 0.5px groove rgb(216, 122, 78);
+    border-radius: 4rem;
+    padding: 0.6rem 4rem;
+    margin: 3rem auto;
+    width: fit-content;
+}
 
+.btn:hover{
+    background-color: rgb(216, 122, 78);
+    color: white;
+}
+#agents{
+    padding: 2rem;
+}
+.agents-content{
+    margin: 1.5rem 1rem;
+    max-width: 30rem;
+}
+.agents-detail{
+    display: grid;
+    margin: 2rem 0;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+.agent-detail{
+    background: #a5a2a22b;
+    margin-bottom: 3rem;
+}
+.agent-detail img{
+    width: 100%;
+}
+.agent-detail p{
+    color: rgba(34, 34, 34, 1);
+    text-transform: capitalize;
+    margin-left: 1.5rem;
+    font-weight: 600;
+    padding: 0.4rem 0;
+}
+.agent-detail p:last-child{
+    color: rgba(34, 34, 34, 0.3);
+    text-transform: capitalize;
+    padding-top: 0;
+    font-weight: 300;
+}
 @media screen and (max-width: 768px) {
     #hamburger-icon{
         display: block;
@@ -163,7 +231,7 @@ h3{
         top: 1px;
         z-index: 999;
         width: 40%;
-        height: 100vh;
+        height: 111vh;
         margin: auto;
         background: rgb(34, 34, 34, 0.8);
         padding-top: 3rem;
@@ -197,11 +265,15 @@ h3{
     .overlay-content h1{
         font-size: 1.4rem;
         line-height: 2rem;
+        margin-top: 5rem;
     }
     .header-details .image{
         height: 85vh;
     }
     .container{
+        display: block;
+    }
+    .agents-detail{
         display: block;
     }
 }
@@ -210,21 +282,19 @@ h3{
     background: #FAFAFA;
     z-index: -2;   
     padding: 1rem;
+    margin: 3rem 2rem;
+    height: 15rem;
 }
 
 .carousel-cell {
     width: 25%;
-    /* height: auto; Allow the height to adjust based on content */
-    margin-right: 10px;
-    /* background-color: #8C8; */
-    border-radius: 5px;
-    overflow: hidden; /* To make sure image doesn't overflow */
+    margin: 0 10px 4rem 0;
+    overflow: hidden;
   }
   
   .carousel-cell img {
-    width: 100%; /* Image takes full width of the cell */
-    height: 100%; /* Maintain height proportional to width */
-    object-fit: cover; /* Ensures image covers the cell and retains aspect ratio */
+    width: 100%;
+    height: 100%; 
   }
   
 
@@ -232,13 +302,10 @@ h3{
 .carousel-cell:before {
     display: block;
     text-align: center;
-    content: counter(carousel-cell);
-    line-height: 200px; /* Center text vertically */
     font-size: 80px;
     color: white;
 }
 
-/* Custom button styles */
 .custom-button {
     padding: 10px 20px;
     color: #333;
@@ -248,26 +315,26 @@ h3{
 .custom-button:hover{
     font-weight: 700;
 }
-.flickity-slider{
+/* .flickity-slider{
     position: relative;
     left: 0px;
     z-index: 1;
-    bottom: 11rem;
+    bottom: 9rem;
     transform: translateX(-25.8%);
 }
 .flickity-viewport{
     height : 20rem
-}
+} */
 
 @media (max-width: 768px) {
     .carousel-cell {
-      width: 32%; /* Wider cells for smaller screens */
+      width: 32%; 
     }
   }
   
   @media (max-width: 480px) {
     .carousel-cell {
-      width: 100%; /* Full-width for mobile screens */
+      width: 100%;
     }
   }
   
