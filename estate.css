@@ -208,6 +208,59 @@ h3,h4{
     padding-top: 0;
     font-weight: 300;
 }
+.show-best{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 6rem;
+}
+h5{
+    font-size: 3rem;
+    text-transform: capitalize;
+    color: rgb(216, 122, 78);
+}
+.image-wrapper img{
+    width: 26rem;
+    border-radius: 10px;
+}
+.show-best-details{
+    align-self: self-start;
+}
+.show-best-details > p{
+    margin: 1.5rem 0;
+    line-height: 1.65rem;
+}
+.show-best-details .classic{
+    font-size: 1.6rem;
+    line-height: 2rem;
+}
+.points{
+    margin-top: 1.5rem;
+}
+.show-best-details .points p::before{
+    padding-right: 0.6rem;
+    content: "\2022";
+}
+.points p{
+    margin-top: 0.7rem;
+}
+.show-link{
+    background-color: white;
+    color: rgb(216, 122, 78);
+    border: 0.5px groove rgb(216, 122, 78);
+    border-radius: 4rem;
+    padding: 0.6rem 4rem;
+    margin: 3rem auto;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+}
+.show-link:hover{
+    background-color: rgb(216, 122, 78);
+    color: white;
+}
 @media screen and (max-width: 768px) {
     #hamburger-icon{
         display: block;
@@ -252,6 +305,23 @@ h3,h4{
     .overlay-content {
         line-height: 1.5rem;
         font-size: 1rem;
+    }
+    .image-wrapper img{
+        display: none;
+    }
+    .show-best{
+        display: block;
+        margin: 0 auto;
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+    h5{
+        font-size: 2rem;
+    }
+    .show-best-details .classic {
+        font-size: 1rem;
+        line-height: 1.5rem;
     }
 }
 
