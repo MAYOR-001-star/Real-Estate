@@ -48,25 +48,23 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 
 
-      // Initialize Flickity
   var flkty = new Flickity('.carousel', {
     wrapAround: true,
     prevNextButtons: false,
     pageDots: false,
-    cellAlign: 'left', // default alignment
+    cellAlign: 'left', 
     contain: true
   });
 
-  // Function to adjust alignment based on screen size
   function updateAlignment() {
     if (window.innerWidth <= 480) {
-      flkty.options.cellAlign = 'right'; // Align to right for small screens
+      flkty.options.cellAlign = 'right';
     } else if (window.innerWidth <= 768) {
-      flkty.options.cellAlign = 'center'; // Align to center for tablets
+      flkty.options.cellAlign = 'center';
     } else {
-      flkty.options.cellAlign = 'left'; // Default alignment for larger screens
+      flkty.options.cellAlign = 'left'; 
     }
-    flkty.resize(); // Refresh Flickity layout
+    flkty.resize();
   }
 
   // Initial update
