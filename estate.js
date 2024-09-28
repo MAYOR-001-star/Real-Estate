@@ -82,3 +82,36 @@ document.addEventListener('DOMContentLoaded', function() {
     flkty.next();
   });
 });
+
+const prev = document.querySelector("#previous")
+const next = document.querySelector("#next")
+const slideImages = document.querySelectorAll('.slide')
+let index = 0
+
+document.addEventListener("DOMContentLoaded", () => initialize())
+
+const initialize = () => {
+  showSlide(index)
+}
+
+const showSlide  = (index) => {
+  if(index < 0){
+    index = slideImages.length - 1
+  }else if(index >= slideImages.length){
+    index = 0
+  }
+  slideImages.forEach((slideImage)=>{
+    slideImage.style.display = "none"
+  })
+  slideImages[index].style.display = "block"
+}
+
+const prevSlide = () => {
+  index--;
+  showSlide(index)
+}
+
+const nextSlide = () => {
+  index++;
+  showSlide(index)
+}

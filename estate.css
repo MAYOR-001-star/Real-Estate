@@ -8,7 +8,6 @@
 }
 .header{
     background: transparent;
-
 }
 #navigation{
     height: 5rem;
@@ -17,7 +16,7 @@
     justify-content: space-between;
     padding: 0 2rem;
     font-size: 1.35rem;
-    border-bottom: 0.5px groove gray;
+    border-bottom: 0.5px groove hsl(0, 1%, 22%);
     position: fixed;
     top: 0;
     z-index: 4;
@@ -105,6 +104,7 @@ li{
 h2{
     text-align: center;
     margin: 2rem 0;
+    font-size: 2rem;
     color: rgb(216, 122, 78);
 }
 .company-details{
@@ -137,6 +137,9 @@ h3,h4{
     color: rgb(216, 122, 78);
     font-size: 2rem;
     text-transform: capitalize;
+}
+h3{
+    margin-left: 3rem;
 }
 .properties-header, aside{
     display: flex;
@@ -261,7 +264,190 @@ h5{
     background-color: rgb(216, 122, 78);
     color: white;
 }
-@media screen and (max-width: 768px) {
+h6{
+    color: rgb(216, 122, 78);
+    font-size: 2rem;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+.services{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding: 3rem;
+}
+.services-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+.service{
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+.service-detail{
+    margin-bottom: 1rem;
+}
+.service-link{
+    color: rgb(216, 122, 78);
+    text-transform: capitalize;
+}
+#news{
+    margin: 5rem 0;
+}
+.custom-header{
+    color: rgb(216, 122, 78);
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 2rem;
+    margin: 0 auto 3rem auto;
+    display: flex;
+    text-transform: capitalize;
+}
+.slides{
+    margin: 0 auto;
+    max-width: 50%;
+}
+.slide{
+    display: none;
+    position: relative;
+    margin: 0 auto;
+    max-width: 40rem;
+    text-align: center;
+}
+q{
+    font-style: italic;
+    line-height: 2rem;
+}
+.slide p{
+    margin: 1.5rem 0;
+    font-weight: 600;
+}
+.news-btn{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8rem;
+    position: relative;
+    width: 100%;
+    top: 3rem;
+}
+#previous, #next{
+    cursor: pointer;
+}
+#contact, #about{
+    background-color: #e0dede4d;
+    padding: 6rem 0;
+}
+.contact-content{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    margin-top: 6rem;
+}
+.contact-details{
+    padding: 1rem;
+    width: 20rem;
+}
+form{
+    width: 25rem;
+}
+.content-detail{
+    margin: 1rem 0;
+}
+form, .contact-details{
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: white;
+}
+.content-detail p:nth-child(2), #contact-mail{
+    color: rgb(216, 122, 78);
+}
+form p:first-child{
+    text-align: center;
+    margin: 1.5rem 0;
+}
+input, textarea{
+    margin: 0.5rem 0 1.5rem 0;
+    border-radius: 10px;
+    padding: 0.2rem;
+    width: 20rem;
+    outline: none;
+    border: 1px groove gray;
+}
+textarea{
+    margin: 0.5rem 0;
+    padding: 1rem;
+}
+button[type="submit"]{
+    background-color: white;
+    color: rgb(216, 122, 78);
+    border: 0.5px groove rgb(216, 122, 78);
+    border-radius: 4rem;
+    padding: 0.6rem 1rem;
+    margin: 2rem auto;
+}
+button[type="submit"]:hover{
+    color: white;
+    background-color: rgb(216, 122, 78);
+}
+footer{
+    background-color: hsl(0, 1%, 22%);
+    padding: 5rem;  
+}
+.footer{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    gap: 4rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 0.5px groove gray;
+}
+.footer-content-title{
+    color: white;
+    margin-bottom: 1rem;
+}
+.last{
+    color: gray;
+    text-align: center;
+}
+.footer-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    gap: 0.5rem;
+}
+.footer-socials{
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+.footer-btn{
+    background-color: rgb(216, 122, 78);
+    color: white;
+    border-radius: 0 16px 16px 0;
+    border: none;
+    padding: 0.6rem;
+    position: relative;
+    bottom: 3.81rem;
+    height: 2.26rem;
+    left: 14.56rem;
+}
+.footer-input{
+    height: 2.3rem;
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+/* @media screen and (max-width: 768px) {
     #hamburger-icon{
         display: block;
         cursor: pointer;
@@ -346,14 +532,31 @@ h5{
     .agents-detail{
         display: block;
     }
-}
+    .image-wrapper img{
+        display: none;
+    }
+    .show-best{
+        display: block;
+        margin: 0 auto;
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+    h5{
+        font-size: 2rem;
+    }
+    .show-best-details .classic {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+} */
 
 .carousel {
     background: #FAFAFA;
     z-index: -2;   
     padding: 1rem;
     margin: 3rem 2rem;
-    height: 15rem;
+    height: 20rem;
 }
 
 .carousel-cell {
@@ -408,3 +611,12 @@ h5{
     }
   }
   
+
+
+
+
+
+
+
+
+
