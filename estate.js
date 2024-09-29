@@ -1,29 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
     const navigation = document.getElementById("navigation");
-    const links = document.querySelectorAll("ul li a");
 
 
     window.addEventListener("scroll", () => {
         if (window.scrollY > 0) {
             navigation.style.backgroundColor = "white";
             navigation.style.boxShadow = "0px 2px 3px rgba(255, 255, 255, 0.65)";
-            links.forEach((link) => {
-                link.classList.add("sticky-color");
-            });
         } else {
             navigation.style.backgroundColor = "transparent";
             navigation.style.boxShadow = "none";
-            links.forEach((link) => {
-                link.classList.remove("sticky-color");
-            });
         }
-    });
-
-    links.forEach((link) => {
-        link.addEventListener('click', () => {
-            links.forEach((l) => l.classList.remove("active"));
-            link.classList.add("active");
-        });
     });
 
     const openNavbar = document.querySelector("#hamburger-icon")
