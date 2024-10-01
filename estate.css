@@ -458,9 +458,6 @@ footer{
     .overlay-content {
         width: min(100%, 85%);
     }
-    .image-wrapper img {
-        width: 18rem;
-    }
     h5 {
         font-size: 1.8rem;
     }
@@ -633,6 +630,13 @@ footer{
     }
     input, textarea {
         width: 16rem;
+    }
+    .image-wrapper{
+        display: none;
+    }
+    .show-best{
+        width: 100%;
+        display: block;
     }
 }
 @media screen and (max-width: 495px) {
