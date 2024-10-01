@@ -20,14 +20,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     openNavbar.addEventListener("click", ()=>{
         openNavbar.style.display = "none"
-        smallScreenNavbar.classList.toggle("small-screen")
+        smallScreenNavbar.classList.add("small-screen")
         listContainer.style.display = "flex"
         closeNavbar.classList.add("show")
         listContainer.classList.add("list-container")
     })
     closeNavbar.addEventListener("click", ()=>{
         openNavbar.style.display = "block"
-        smallScreenNavbar.classList.remove("small-screen")
+        smallScreenNavbar.classList.add("removing")
+        setTimeout(()=>{
+          smallScreenNavbar.classList.remove("small-screen", "removing")
+        }, 500)
         listContainer.classList.remove("list-container")
         listContainer.style.display = "none"
         closeNavbar.classList.remove("show")
@@ -53,13 +56,11 @@ document.addEventListener('DOMContentLoaded', function() {
     flkty.resize();
   }
 
-  // Initial update
-  updateAlignment();
 
-  // Listen for window resize events
+  updateAlignment();
+  
   window.addEventListener('resize', updateAlignment);
 
-  // Custom buttons control
   document.getElementById('prev').addEventListener('click', function() {
     flkty.previous();
   });

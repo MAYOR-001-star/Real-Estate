@@ -503,67 +503,68 @@ footer{
 }
 
 @media screen and (max-width: 768px) {
-    #close-icon.show{
+    /* Initial state: Navbar hidden */
+    .for-mobile-nav {
+        width: 0; /* Navbar starts hidden with 0 width */
+        visibility: hidden; /* Hidden state */
+        opacity: 0; /* Invisible */
+        overflow: hidden; /* Prevent content overflow */
+        transition: width 0.5s ease-in-out, opacity 0.5s ease; /* Smooth transition for both width and opacity */
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 1px;
+        z-index: 999;
+        height: 111vh;
+        background: rgba(34, 34, 34, 0.8);
+        padding-top: 3rem;
+    }
+
+    /* Navbar open: Shows the mobile menu */
+    .for-mobile-nav.small-screen {
+        width: 45%; /* Final width when open */
+        visibility: visible; /* Make visible */
+        opacity: 1; /* Fully visible */
+    }
+
+    /* Ensure visibility remains after transition (avoids flickering) */
+    .for-mobile-nav.small-screen.removing {
+        width: 0; /* Reduce width to 0 when closing */
+        opacity: 0; /* Fade out */
+    }
+
+    /* Hamburger Icon visibility on mobile */
+    #hamburger-icon {
+        display: block;
+    }
+
+    /* Close icon styles */
+    #close-icon.show {
         display: block;
         text-align: end;
         width: 100%;
         padding-right: 1rem;
         cursor: pointer;
     }
-    ul.list-container{
+
+    /* List Container styles */
+    ul.list-container {
         flex-direction: column;
-        align-items: start;
+        align-items: flex-start;
         margin-top: 1rem;
         gap: 15px;
         padding-left: 1rem;
     }
-    .for-mobile-nav.small-screen{
-        display: flex;
-        align-items: start;
-        justify-content: start;
-        flex-direction: column;
-        position: absolute;
-        right: 0;
-        gap: 15px;
-        top: 1px;
-        z-index: 999;
-        width: 45%;
-        height: 111vh;
-        margin: auto;
-        background: rgb(34, 34, 34, 0.8);
-        padding-top: 3rem;
-    }
-    #hamburger-icon{
-        display: block;
-    }
-    ul{
+
+    /* Hide unordered list initially */
+    ul {
         display: none;
-    }
-    .header-details .image{
-        height: 75vh;
-    }
-    .overlay-content {
-        line-height: 1.5rem;
-        font-size: 1rem;
-    }
-    .image-wrapper img{
-        display: none;
-    }
-    .show-best{
-        display: block;
-        margin: 0 auto;
-        padding: 1rem;
-        width: 100%;
-        text-align: center;
-    }
-    h5{
-        font-size: 2rem;
-    }
-    .show-best-details .classic {
-        font-size: 1rem;
-        line-height: 1.5rem;
     }
 }
+
 
 @media screen and (max-width: 789px) {
     .news-btn {
@@ -639,9 +640,9 @@ footer{
         left: 14.5rem;
         bottom: 3.8rem;
     }
-    .for-mobile-nav.small-screen {
+    /* .for-mobile-nav.small-screen {
         width: 65%;
-    }
+    } */
 }
 
 
