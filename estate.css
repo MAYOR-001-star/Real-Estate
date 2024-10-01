@@ -641,12 +641,9 @@ footer{
 }
 @media screen and (max-width: 495px) {
     .footer-btn {
-        left: 14.5rem;
+        left: 15rem;
         bottom: 3.8rem;
     }
-    /* .for-mobile-nav.small-screen {
-        width: 65%;
-    } */
 }
 
 
