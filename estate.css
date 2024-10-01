@@ -525,7 +525,7 @@ footer{
 
     /* Navbar open: Shows the mobile menu */
     .for-mobile-nav.small-screen {
-        width: 45%; /* Final width when open */
+        width: 65%; /* Final width when open */
         visibility: visible; /* Make visible */
         opacity: 1; /* Fully visible */
     }
