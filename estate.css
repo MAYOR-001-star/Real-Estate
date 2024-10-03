@@ -194,7 +194,7 @@ aside{
 .agents-detail{
     display: grid;
     margin: 2rem 0;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
@@ -222,7 +222,7 @@ aside{
 .show-best{
     display: grid;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     padding: 6rem;
@@ -412,6 +412,7 @@ footer{
     grid-template-columns: 3fr 1fr 1fr;
     gap: 4rem;
     justify-content: center;
+    align-items: start;
     margin-bottom: 2rem;
     padding-bottom: 2.5rem;
     border-bottom: 0.5px groove gray;
@@ -480,11 +481,10 @@ footer{
         width: 20rem;
     }
     .show-best{
-        gap: 4rem;
-        padding: 2.5rem;
+        padding: 5rem;
     }
     .footer-paragraph{
-        font-size: 0.75rem;
+        font-size: 1rem;
     }
     .footer-input {
         width: 16rem;
@@ -499,14 +499,29 @@ footer{
     }
 }
 
+@media screen and (max-width: 888px) {
+    .image-wrapper img {
+        width: 17rem;
+    }
+    
+}
+
+@media screen and (max-width: 780px) {
+    .image-wrapper{
+        display: none;
+    }
+    .show-best{
+        grid-template-columns: 1fr;
+    }
+}
+
 @media screen and (max-width: 768px) {
-    /* Initial state: Navbar hidden */
     .for-mobile-nav {
-        width: 0; /* Navbar starts hidden with 0 width */
-        visibility: hidden; /* Hidden state */
-        opacity: 0; /* Invisible */
-        overflow: hidden; /* Prevent content overflow */
-        transition: width 0.5s ease-in-out, opacity 0.5s ease; /* Smooth transition for both width and opacity */
+        width: 0;
+        visibility: hidden;
+        opacity: 0; 
+        overflow: hidden;
+        transition: width 0.5s ease-in-out, opacity 0.5s ease;
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;
@@ -520,16 +535,14 @@ footer{
         padding-top: 3rem;
     }
 
-    /* Navbar open: Shows the mobile menu */
     .for-mobile-nav.small-screen {
-        width: 65%; /* Final width when open */
-        visibility: visible; /* Make visible */
-        opacity: 1; /* Fully visible */
+        width: 65%; 
+        visibility: visible; 
+        opacity: 1; 
     }
 
-    /* Ensure visibility remains after transition (avoids flickering) */
     .for-mobile-nav.small-screen.removing {
-        width: 0; /* Reduce width to 0 when closing */
+        width: 0; 
         opacity: 0; /* Fade out */
     }
 
